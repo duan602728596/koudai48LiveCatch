@@ -4,7 +4,7 @@
   "version": "0.2.0",
   "nodejs": true,
   "window": {
-    "title": "口袋48视频直播下载（测试版v0.2.0）",
+    "title": "口袋48视频直播流抓取（测试版v0.2.0）",
     "position": "center",
     "toolbar": true,
     "frame": true,
