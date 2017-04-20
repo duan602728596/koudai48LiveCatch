@@ -1,4 +1,3 @@
-const async = node_require('async');
 const React = require('react');
 const ReactRouterDom = require('react-router-dom');
 const { Component } = React;
