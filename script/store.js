@@ -36,6 +36,7 @@ function delReloadList(state, action){
 // 从录制列表中删除2，及时删除
 function delReloadList2(state, action){
     const m = state.recordList.get(action.liveId);
+    console.log('清除已关闭的直播：', action.value);
     state.recordList.delete(action.liveId);
     action.callback();
 }

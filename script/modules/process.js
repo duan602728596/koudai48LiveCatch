@@ -5,38 +5,8 @@ const process= node_require('process');
 const __dirname = path.dirname(process.execPath).replace(/\\/g, '/');
 const date = require('./date');
 const store = require('../store');
+const panduan = require('./panduan');
 
-const shareData = window._shareData;
-
-// 当前的直播列表
-function rIndex(key){
-    const liveList = store.getState().liveList;
-    let res = null;
-    for(let i = 0, j = liveList.length; i < j; i++){
-        if(key === liveList[i].liveId){
-            res = i;
-            break;
-        }
-    }
-    return res;
-}
-// 当结束时判断列表内的录制信息，及时清除已完成的项目
-function panduan(){
-    store.getState().recordList.forEach(function(value, key){
-        // 没有当前直播了
-        if(rIndex(key) === null){
-            store.dispatch({
-                type: 'DEL_RELOADLIST2',
-                liveId: key,
-                callback: function(){
-                    if(shareData.recordListCallBack){
-                        shareData.recordListCallBack();
-                    }
-                }
-            });
-        }
-    });
-}
 
 function stdout(data){
     console.log('stdout：\n' + data);

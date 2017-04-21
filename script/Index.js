@@ -6,6 +6,8 @@ const store = require('./store');
 const date = require('./modules/date');
 const post = require('./modules/post');
 const process = require('./modules/process');
+const panduan = require('./modules/panduan');
+
 
 class Alert extends Component{
     render(){
@@ -216,6 +218,7 @@ class Index extends Component{
     // 自动录制定时
     _autoRecordFun(){
         console.log('自动录制：' + date());
+        panduan();
         const _this = this;
         this.setState ({
             loadingAnimation: true
