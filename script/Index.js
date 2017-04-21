@@ -205,7 +205,7 @@ class Index extends Component{
                     <span>（分钟）：</span>
                 </label>
                 <input className="form-control index-auto-input" id="recordTime" ref="recordTime" type="text" disabled={ this.state.timer } />
-                <button className="btn btn-default index-mLeft" type="button" onClick={ this.onChangeTime.bind(this) }>
+                <button className="btn btn-default index-mLeft" type="button" onClick={ this.onChangeTime.bind(this) } disabled={ this.state.timer } >
                     <span className="glyphicon glyphicon-cog index-icon" />
                     <span>确认修改</span>
                 </button>
