@@ -12,6 +12,9 @@ function panduan(){
                 liveId: key,
                 value: value,
                 callback: function(){
+                    if(shareData.liveListCallBack) {
+                        shareData.liveListCallBack();
+                    }
                     if(shareData.recordListCallBack){
                         shareData.recordListCallBack();
                     }
