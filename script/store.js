@@ -29,6 +29,15 @@ function delReloadList(state, action){
     const m = state.recordList.get(action.liveId);
     m.child.kill('SIGTERM');
     state.recordList.delete(action.liveId);
+    if(shareData.recordListCallBack){
+        shareData.recordListCallBack();
+    }
+}
+// 从录制列表中删除2，及时删除
+function delReloadList2(state, action){
+    const m = state.recordList.get(action.liveId);
+    state.recordList.delete(action.liveId);
+    action.callback();
 }
 // 修改自动录制间隔
 function changeRecordTime(state, action){
@@ -47,6 +56,9 @@ function reducer(state, action){
             break;
         case 'DEL_RELOADLIST':
             delReloadList(state, action);
+            break;
+        case 'DEL_RELOADLIST2':
+            delReloadList2(state, action);
             break;
         case 'STD_ERR':
             stdErr(state, action);
