@@ -57,7 +57,7 @@ function error(err){
 }
 
 function process2(item, index){
-    const title = item.liveId + '_' + item.title + '_starttime-' + date(item.startTime).replace(/\:/g, '-') + '_recordtime-' + date(item.startTime).replace(/\:/g, '-');
+    const title = item.liveId + '_' + item.title + '_starttime-' + date(item.startTime).replace(/\:/g, '-') + '_recordtime-' + date().replace(/\:/g, '-');
     const child = child_process.spawn(__dirname + '/ffmpeg.exe', [
         '-i',
         `${ item.streamPath }`,
