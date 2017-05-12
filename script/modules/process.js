@@ -31,13 +31,9 @@ function process2(item, index){
     const child = child_process.spawn(__dirname + '/ffmpeg.exe', [
         '-i',
         `${ item.streamPath }`,
-        '-acodec',
+        '-c',
         'copy',
-        '-vcodec',
-        'copy',
-        '-f',
-        'mp4',
-        `${ __dirname }/output/${ title }.mp4`
+        `${ __dirname }/output/${ title }.flv`
     ]);
 
     child.stdout.on('data', stdout);

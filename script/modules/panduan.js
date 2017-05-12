@@ -6,7 +6,7 @@ const shareData = window._shareData;
 function panduan(){
     shareData.recordList.forEach(function(value, key){
         // 没有当前直播了
-        if(value.child.exitCode !== null){
+        if(value.child.exitCode !== null || value.child.killed){
             store.dispatch({
                 type: 'DEL_RELOADLIST2',
                 liveId: key,
