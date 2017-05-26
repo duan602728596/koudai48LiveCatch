@@ -10,12 +10,12 @@ const RecordList = require('./RecordList');
 
 ReactDOM.render(
 
-    <HashRouter>
-        <div className="index-app">
-            <Route path="/" component={ Index } />
-            <Route path="/recordList" component={ RecordList } />
-        </div>
-    </HashRouter>
+  <HashRouter>
+    <div className="index-app">
+      <Route path="/" component={ Index }/>
+      <Route path="/recordList" component={ RecordList }/>
+    </div>
+  </HashRouter>
 
-    , document.getElementById('ReactBody')
+  , document.getElementById('ReactBody')
 );
