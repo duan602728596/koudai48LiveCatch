@@ -215,7 +215,7 @@ class Index extends Component {
           <span>（分钟）：</span>
         </label>
         <input className="form-control index-auto-input" id="recordTime" ref="recordTime" type="text"
-               disabled={ this.state.timer }/>
+               disabled={ this.state.timer } />
         <button className="btn btn-default index-mLeft" type="button" onClick={ this.onChangeTime.bind(this) }
                 disabled={ this.state.timer }>
           <span className="glyphicon glyphicon-cog index-icon" />
@@ -307,13 +307,13 @@ class Index extends Component {
         <div className="index-dataBox">
           <table className="table table-bordered table-hover table-condensed index-table">
             <thead>
-            <tr className="info">
-              <th className="index-table-td0">直播ID</th>
-              <th className="index-table-td1">直播间</th>
-              <th className="index-table-td2">直播标题</th>
-              <th className="index-table-td3">开始时间</th>
-              <th className="index-table-td4">操作</th>
-            </tr>
+              <tr className="info">
+                <th className="index-table-td0">直播ID</th>
+                <th className="index-table-td1">直播间</th>
+                <th className="index-table-td2">直播标题</th>
+                <th className="index-table-td3">开始时间</th>
+                <th className="index-table-td4">操作</th>
+              </tr>
             </thead>
             <tbody>{ this.liveListView() }</tbody>
           </table>

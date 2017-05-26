@@ -12,8 +12,8 @@ ReactDOM.render(
 
   <HashRouter>
     <div className="index-app">
-      <Route path="/" component={ Index }/>
-      <Route path="/recordList" component={ RecordList }/>
+      <Route path="/" component={ Index } />
+      <Route path="/recordList" component={ RecordList } />
     </div>
   </HashRouter>
 
