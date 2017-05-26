@@ -8,9 +8,9 @@ const plugins = [];
 
 
 {
-    for(let i = 0, j = plugins.length; i < j; i++){
-        config.plugins.push(plugins[i]);
-    }
+  for(let i = 0, j = plugins.length; i < j; i++){
+    config.plugins.push(plugins[i]);
+  }
 }
 
 
