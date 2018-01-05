@@ -1,7 +1,7 @@
 # 口袋48成员直播抓取+多开客户端
 
 ## 软件下载链接
-进入到[https://github.com/duan602728596/document/tree/master/48](https://github.com/duan602728596/document/tree/master/48)下载
+进入到[https://github.com/duan602728596/document/blob/master/48/README.md](https://github.com/duan602728596/document/blob/master/48/README.md)下载
 
 ## 功能
 * 成员直播录源
