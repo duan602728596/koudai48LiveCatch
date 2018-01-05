@@ -15,6 +15,7 @@
 * 输入命令 `$ npm run npmi` 或 `$ yarn run yarni` 安装生产环境依赖。
 
 ## nwjs中文文档
+nwjs使用`v0.26.6`及以下版本   
 [https://wizardforcel.gitbooks.io/nwjs-doc/content/wiki/index.html](https://wizardforcel.gitbooks.io/nwjs-doc/content/wiki/index.html)
 
 ## 谷歌扩展
