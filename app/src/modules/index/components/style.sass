@@ -1,0 +1,32 @@
+.tools
+  position: fixed
+  z-index: 1
+  top: 0
+  left: 0
+  right: 0
+  padding: 10px
+.list
+  margin: 60px 10px 10px 10px
+  th, td
+    font-size: 12px
+    vertical-align: middle
+.alertInfor
+  $width: 200px
+  position: fixed
+  z-index: 3
+  top: 30px
+  left: 50%
+  margin-left: -$width / 2
+  width: $width
+  font-size: 12px
+  text-align: center
+.loadingBtn
+  width: 130px
+.ml10
+  margin-left: 10px
+
+/* 循环表格宽度 */
+$td-width: (1: 15%, 2: 20%, 3: 30%, 4: 15%, 5: 20%)
+@each $key, $value in $td-width
+  .th#{ $key }
+    width: $value

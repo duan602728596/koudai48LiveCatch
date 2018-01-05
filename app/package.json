@@ -1,0 +1,68 @@
+{
+  "name": "koudai48LiveCatch",
+  "version": "2.0.0",
+  "description": "口袋48成员直播抓取+多开客户端",
+  "license": "MIT",
+  "scripts": {
+    "start": "npm run cleanbuild && cross-env NODE_ENV=development ./node_modules/.bin/webpack --config ./config/webpack.dev.js --watch",
+    "build": "npm run cleanbuild && cross-env NODE_ENV=production ./node_modules/.bin/webpack --config ./config/webpack.pro.js --progress",
+    "cleanbuild": "./node_modules/.bin/rimraf build",
+    "devdll": "cross-env NODE_ENV=development ./node_modules/.bin/webpack --config ./config/webpack.dll.js --progress",
+    "prodll": "cross-env NODE_ENV=production ./node_modules/.bin/webpack --config ./config/webpack.dll.js --progress",
+    "npmi": "npm install --production",
+    "yarni": "yarn install --production=true --pure-lockfile",
+    "clean": "node-modules-clean --ext \".opts|.map|.ts|.yml|.png|.dot|.jpg\""
+  },
+  "main": "./build/index.html",
+  "nodejs": true,
+  "window": {
+    "title": "口袋48成员直播抓取+多开客户端（v2.0.0）",
+    "position": "center",
+    "toolbar": true,
+    "frame": true,
+    "width": 1200,
+    "height": 600,
+    "fullscreen": false,
+    "show_in_taskbar": true
+  },
+  "author": {
+    "name": "段昊辰",
+    "email": "duanhaochen@126.com",
+    "url": "https://github.com/duan602728596"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.0.0-beta.36",
+    "@babel/preset-react": "^7.0.0-beta.36",
+    "babel-loader": "^8.0.0-beta.0",
+    "bootstrap": "^4.0.0-beta.3",
+    "coffee-loader": "^0.9.0",
+    "coffeescript": "^2.1.1",
+    "cross-env": "^5.1.3",
+    "css-loader": "^0.28.7",
+    "extract-text-webpack-plugin": "^3.0.2",
+    "file-loader": "^1.1.6",
+    "flv.js": "^1.4.0",
+    "happypack": "^4.0.0",
+    "html-webpack-plugin": "^2.30.1",
+    "moment": "^2.20.1",
+    "node-sass": "^4.7.2",
+    "optimize-css-assets-webpack-plugin": "^3.2.0",
+    "pug": "^2.0.0-rc.4",
+    "pug-loader": "^2.3.0",
+    "rc-queue-anim": "^1.4.1",
+    "react": "^16.2.0",
+    "react-dom": "^16.2.0",
+    "rimraf": "^2.6.2",
+    "sass-loader": "^6.0.6",
+    "style-loader": "^0.19.1",
+    "uglifyjs-webpack-plugin": "^1.1.5",
+    "url-loader": "^0.6.2",
+    "webpack": "^3.10.0"
+  },
+  "peerDependencies": {
+    "node-modules-clean": "^0.0.1-alpha.2"
+  },
+  "dependencies": {
+    "request": "^2.83.0"
+  }
+}

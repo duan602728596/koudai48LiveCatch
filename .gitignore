@@ -1,0 +1,28 @@
+# nwjs
+*.html
+*.dll
+*.log
+*.nexe
+*.bin
+*.pak
+*.dat
+chromedriver.exe
+nw.exe
+nwjc.exe
+payload.exe
+pnacl
+locales
+swiftshader
+
+# dependent
+dependent/ffmpeg/ffmpeg.exe
+dependent/ffmpeg/licenses
+
+# output
+output/*.flv
+output/*.mp4
+output/*.xls
+output/*.xlsx
+
+# webstorm
+.idea

@@ -1,0 +1,28 @@
+$height: 30px
+
+body, html, :global(.react-app)
+  width: 100%
+  height: 100%
+  overflow: hidden
+.information, .videoBox
+  position: absolute
+  left: 0
+  right: 0
+.information
+  top: 0
+  padding: 5px 10px
+  height: $height
+  font-size: 12px
+  line-height: $height - 10px
+  color: #fff
+  overflow: hidden
+  text-overflow: ellipsis
+  white-space: nowrap
+  span
+    margin: 0 10px 0 3px
+.videoBox
+  top: $height
+  bottom: 0
+.video
+  width: 100%
+  height: 100%
