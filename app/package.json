@@ -2,7 +2,7 @@
   "name": "koudai48LiveCatch",
   "version": "2.0.0",
   "description": "口袋48成员直播抓取+多开客户端",
-  "license": "MIT",
+  "license": "Apache License 2.0",
   "scripts": {
     "start": "npm run cleanbuild && cross-env NODE_ENV=development ./node_modules/.bin/webpack --config ./config/webpack.dev.js --watch",
     "build": "npm run cleanbuild && cross-env NODE_ENV=production ./node_modules/.bin/webpack --config ./config/webpack.pro.js --progress",
