@@ -30,6 +30,9 @@
     "email": "duanhaochen@126.com",
     "url": "https://github.com/duan602728596"
   },
+  "dependencies": {
+    "request": "^2.83.0"
+  },
   "devDependencies": {
     "@babel/core": "^7.0.0-beta.36",
     "@babel/preset-react": "^7.0.0-beta.36",
@@ -61,8 +64,5 @@
   },
   "peerDependencies": {
     "node-modules-clean": "^0.0.1-alpha.2"
-  },
-  "dependencies": {
-    "request": "^2.83.0"
   }
 }
