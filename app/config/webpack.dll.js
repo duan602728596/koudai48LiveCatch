@@ -61,6 +61,7 @@ module.exports = {
         NODE_ENV: JSON.stringify(process.env.NODE_ENV)
       }
     }),
+    new webpack.IgnorePlugin(/^\.\/locale$/, /moment$/),
     // 代码压缩
     new UglifyJSPlugin({
       uglifyOptions: {

@@ -1,6 +1,6 @@
 {
   "name": "koudai48LiveCatch",
-  "version": "2.0.1",
+  "version": "2.0.2",
   "description": "口袋48成员直播抓取+多开客户端",
   "license": "Apache License 2.0",
   "scripts": {
