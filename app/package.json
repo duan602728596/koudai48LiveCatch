@@ -1,6 +1,6 @@
 {
   "name": "koudai48LiveCatch",
-  "version": "2.0.2",
+  "version": "2.0.3",
   "description": "口袋48成员直播抓取+多开客户端",
   "license": "Apache License 2.0",
   "scripts": {
@@ -16,7 +16,7 @@
   "main": "./build/index.html",
   "nodejs": true,
   "window": {
-    "title": "口袋48成员直播抓取+多开客户端（v2.0.2）",
+    "title": "口袋48成员直播抓取+多开客户端（v2.0.3）",
     "position": "center",
     "toolbar": true,
     "frame": true,
@@ -34,8 +34,8 @@
     "request": "^2.83.0"
   },
   "devDependencies": {
-    "@babel/core": "^7.0.0-beta.36",
-    "@babel/preset-react": "^7.0.0-beta.36",
+    "@babel/core": "^7.0.0-beta.37",
+    "@babel/preset-react": "^7.0.0-beta.37",
     "babel-loader": "^8.0.0-beta.0",
     "bootstrap": "^4.0.0-beta.3",
     "coffee-loader": "^0.9.0",

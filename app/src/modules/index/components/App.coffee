@@ -100,7 +100,7 @@ class App extends Component
 
   # 录制视频
   onRecordingVideo: (item, event)->
-    title = item.liveId + '_' + item.title + '_' + moment(item.startTime).format('YYYY.MM.DD.hh.mm.ss')
+    title = item.liveId + '_' + item.title + '_' + moment(item.startTime).format('YYYY.MM.DD.HH.mm.ss')
     child = child_process.spawn(option.ffmpeg, [
       '-i',
       item.streamPath,
