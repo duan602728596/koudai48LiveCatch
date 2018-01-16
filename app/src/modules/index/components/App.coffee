@@ -62,7 +62,7 @@ class App extends Component
           <td>{ item.title }</td>
           <td>{ item.subTitle }</td>
           <td>{ item.streamPath }</td>
-          <td>{ moment(item.startTime).format('YYYY-MM-DD hh:mm:ss') }</td>
+          <td>{ moment(item.startTime).format('YYYY-MM-DD HH:mm:ss') }</td>
           <td>
             {
               this.state.recordingList[item.liveId] ? (
