@@ -1,19 +1,11 @@
 /* 生产环境 */
-const os = require('os');
 const path = require('path');
-const UglifyJSPlugin = require('uglifyjs-webpack-plugin');
-const HtmlWebpackPlugin = require('html-webpack-plugin');
 const ExtractTextPlugin = require('extract-text-webpack-plugin');
 const OptimizeCSSPlugin = require('optimize-css-assets-webpack-plugin');
-const HappyPack = require('happypack');
 const { proHtmlWebpackPlugin } = require('./htmlWebpackPlugin');
 const config = require('./webpack.config');
 const cssConfig = require('./css.config');
 const sassConfig = require('./sass.config');
-
-const happyThreadPool = HappyPack.ThreadPool({
-  size: os.cpus().length
-});
 
 /* 合并配置 */
 module.exports = config({
@@ -28,28 +20,14 @@ module.exports = config({
         test: /^.*\.sass$/,
         use: ExtractTextPlugin.extract({
           fallback: 'style-loader',
-          use: [
-            {
-              loader: 'happypack/loader',
-              options: {
-                id: 'sass_loader'
-              }
-            }
-          ]
+          use: [cssConfig, sassConfig]
         })
       },
       { // css
         test: /^.*\.css$/,
         use: ExtractTextPlugin.extract({
           fallback: 'style-loader',
-          use: [
-            {
-              loader: 'happypack/loader',
-              options: {
-                id: 'css_loader'
-              }
-            }
-          ]
+          use: ['css-loader']
         }),
         exclude: /(bootstrap.*\.css)/
       },
@@ -67,38 +45,12 @@ module.exports = config({
     ]
   },
   plugins: [
-    /* HappyPack */
-    // sass
-    new HappyPack({
-      id: 'sass_loader',
-      loaders: [cssConfig, sassConfig],
-      threadPool: happyThreadPool,
-      verbose: true
-    }),
-    // css
-    new HappyPack({
-      id: 'css_loader',
-      loaders: ['css-loader'],
-      threadPool: happyThreadPool,
-      verbose: true
-    }),
-    // 代码压缩
-    new UglifyJSPlugin({
-      uglifyOptions: {
-        warnings: true,
-        output: {
-          comments: false,
-          beautify: false,
-          quote_style: 3
-        }
-      }
-    }),
-    new OptimizeCSSPlugin(),
     // 抽离css
     new ExtractTextPlugin({
       filename: 'style/[name]_[contenthash].css',
       allChunks: true
     }),
+    new OptimizeCSSPlugin(),
     // html模板
     proHtmlWebpackPlugin('index', '../src/modules/index/entry/index.pug'),
     proHtmlWebpackPlugin('video', '../src/modules/video/entry/video.pug')

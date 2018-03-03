@@ -1,8 +1,10 @@
 /* babel-loader 配置 */
+const path = require('path');
+
 module.exports = {
-  path: 'babel-loader',
-  query: {
-    cacheDirectory: true,
+  loader: 'babel-loader',
+  options: {
+    cacheDirectory: path.join(__dirname, '../.babelCache'),
     presets: ['@babel/react']
   }
 };

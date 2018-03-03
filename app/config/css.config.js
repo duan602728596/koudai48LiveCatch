@@ -3,8 +3,8 @@
 const name = '[path][name]__[local]___[hash:base64:15]';
 
 module.exports = {
-  path: 'css-loader',
-  query: {
+  loader: 'css-loader',
+  options: {
     modules: true,
     localIdentName: name
   }
